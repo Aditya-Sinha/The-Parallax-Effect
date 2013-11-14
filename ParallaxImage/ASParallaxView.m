@@ -102,7 +102,6 @@
 
 -(void) setHorizontalParallaxIntensity:(CGFloat)horizontalParallaxIntensity{
     if (_imageView) {
-        _horizontalParallaxIntensity=horizontalParallaxIntensity;
         NSLog(@"Motion Effects: %@", _imageView.motionEffects);
         UIMotionEffectGroup *group = _imageView.motionEffects[0];
         if (group) {
@@ -112,6 +111,8 @@
                     effect.maximumRelativeValue=@(horizontalParallaxIntensity);
                     CGRect newFrame = CGRectIntegral(CGRectInset(self.bounds, -horizontalParallaxIntensity, -self.verticalParallaxIntensity));
                     self.imageView.frame = newFrame;
+                    _horizontalParallaxIntensity=horizontalParallaxIntensity;
+
                 }
             }
         }
@@ -120,7 +121,6 @@
 
 -(void) setVerticalParallaxIntensity:(CGFloat)verticalParallaxIntensity{
     if (_imageView) {
-        _verticalParallaxIntensity=verticalParallaxIntensity;
         NSLog(@"Motion Effects: %@", _imageView.motionEffects);
         UIMotionEffectGroup *group = _imageView.motionEffects[0];
         if (group) {
@@ -130,6 +130,8 @@
                     effect.maximumRelativeValue=@(verticalParallaxIntensity);
                     CGRect newFrame = CGRectIntegral(CGRectInset(self.bounds, -self.horizontalParallaxIntensity, -verticalParallaxIntensity));
                     self.imageView.frame = newFrame;
+                    _verticalParallaxIntensity=verticalParallaxIntensity;
+
                 }
             }
         }

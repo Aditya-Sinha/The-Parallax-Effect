@@ -6,15 +6,15 @@
 //  Copyright (c) 2013 Aditya Sinha. All rights reserved.
 //
 
-#import "ASParallaxView.h"
+#import "ASParallaxImageView.h"
 
-@interface ASParallaxView ()
+@interface ASParallaxImageView ()
 
 @property (nonatomic, strong) UIImageView *imageView;
 
 @end
 
-@implementation ASParallaxView
+@implementation ASParallaxImageView
 
 - (id)initWithFrame:(CGRect)frame
 {

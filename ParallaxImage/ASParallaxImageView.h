@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ASParallaxView : UIView
+@interface ASParallaxImageView : UIView
 
 @property (nonatomic, copy) UIImage *parallaxImage;
 @property (nonatomic, assign) CGFloat horizontalParallaxIntensity;
